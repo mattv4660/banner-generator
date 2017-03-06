@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Banner Generator</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function() {
+            $('button').click(function() {
+                var userAge = $('#userAge').val();
+                var username = $('#username').val();
+                var usercolor = $('#usercolor').val();
+                var usercareer = $('#usercareer').val();
+                
+
+                $('h1').html("Nice to meet you, " + username + ".").css("color", usercolor);
+                $('h2').html("You just applied to, " + usercareer + ", this is a very good choice and you will not be disappointed.").css("color", usercolor);
+                $('h3').html("Im gu2 I'm right!").css("color", usercolor);
+                
+                $("#username").fadeout(3000);
+            });
+        });
+    </script>
+</head>
+ 
+<body>
+
+    Name: <input type="text" id="username"><br>
+    Color: <input type="text" id= "usercolor"><br>
+    Email: <input type="text" id="useremail"><br>
+    Age: <input type="number" id="userAge"><br>
+    Job: <input type="text" id="usercareer"><br>
+
+    <button>GO!</button>
+
+    <h1></h1>
+    <h2></h2>
+</body>
+
+</html>
